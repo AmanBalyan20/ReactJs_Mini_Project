@@ -15,24 +15,27 @@ function Card({ id, image, info, price, name, RemoveCardHandler }) {
     }
 
     return (
-        <div>
-            <img src={image} alt=""></img>
-            <div>
-                <div>
-                    <h4>{price}</h4>
+        <div className="Card">
+            <div className="Image" >
+            <img className="image" src={image} alt=""></img>
+            </div>
+            
+            <div >
+                <div className="sub-heading">
+                    <h4>₹{price}</h4>
                     <h4>{name}</h4>
                 </div>
-            
-            <div>
-                {desc}
-                <span onClick={ReadModeHandler}>
-                    {
-                        readMore ? `Show less` : `Read More`
-                    }
-                </span>
+
+                <div className="description">
+                    {desc}
+                    <span className="read" onClick={ReadModeHandler}>
+                        {
+                            readMore ? `Show less` : `Read More`
+                        }
+                    </span>
+                </div>
             </div>
-            </div>
-            <button onClick={() => RemoveCardHandler(id)}>
+            <button className="button" onClick={() => RemoveCardHandler(id)}>
                 Not Interested
             </button>
         </div>

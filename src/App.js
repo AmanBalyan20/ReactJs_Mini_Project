@@ -18,9 +18,9 @@ function App() {
 //If ther are no tour left in the section 
 if(tours.length === 0){
   return(
-    <div>
+    <div className='App'>
       <h1>You are the one who don't want to be travel !</h1>
-      <button onClick={()=> setTours(data)}>
+      <button className='button' onClick={()=> setTours(data)}>
         Refresh
       </button>
     </div>

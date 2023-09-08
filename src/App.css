@@ -1,38 +1,96 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&family=Press+Start+2P&display=swap');
+
+body {
+  background-color: #091B29;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{ color:white;}
+
+.Main-Heading{
+  font-weight: bolder;
+  font-family:'Press Start 2P';
+  color:darkturquoise;
+  display: inline-block;
+  border-bottom: 5px groove  grey;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Main-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.Cards{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.Card{
+  /* background-color: #113149; */
+  width: 400px;
+  height: max-content;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: #1f6091 2px 6px 10px;  
+}
+
+.Image{
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  
+}
+.image{
+  width:300px;
+  height:300px;
+  box-shadow: rgba(10, 6, 6, 0.24) 10px 6px 18px; 
+}
+
+.Image:hover .image{
+  transform: rotate(10deg);
+  box-shadow: rgba(211, 158, 158, 0.24) 0px 3px 8px; 
+  
+}
+
+.sub-heading{
+  color:azure;
+  display: flex;
+  justify-content: space-around;
+}
+
+.description{
+  font-family: 'Philosopher';
+  font-weight: 16px;
+  font-weight: 600;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.read{
+  color:brown;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button{
+  padding:10px;
+  border-radius: 20px;
+  border-color: rgb(241, 67, 67);
+  color:black;
+  font-size: 15px;
+  font-weight: bolder;
+  background-color: rgb(241, 76, 76);
+  margin-top: 20px;
+}
+.button:hover{
+  background: transparent;
+  border-color: aquamarine;
+  color:white;
+
+}
+
+::selection{
+  color:rgb(17, 138, 17);
+  background: black;
 }
